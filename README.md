@@ -2,9 +2,12 @@
 
 Go service that wraps the [NWS API](https://www.weather.gov/documentation/services-web-api) to return a simple weather forecast for a given lat/lon. Standard library only, no external dependencies.
 
-## Run it
+## Run Instructions
+
+In your terminal, navigate to the project directory and run:
 
 ```bash
+cd golang-weather-api-jh
 go run .
 ```
 
@@ -12,15 +15,15 @@ Starts the server on `:8080` and launches an interactive menu where you can look
 
 ```bash
 curl localhost:8080/health
-curl "localhost:8080/weather?lat=39.7456&lon=-97.0892"
+curl "localhost:8080/weather?lat=42.8294&lon=-98.3289"
 ```
 
 Response:
 ```json
 {
   "short_forecast": "Mostly Sunny",
-  "temp_characterization": "Moderate",
-  "metadata": { "city": "Linn", "state": "KS" }
+  "temp_characterization": "Cold",
+  "metadata": { "city": "Monowi", "state": "NE" }
 }
 ```
 
